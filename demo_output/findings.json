@@ -1,0 +1,107 @@
+{
+  "assessment_date": "2026-11-02",
+  "stale_days": 90,
+  "identity_count": 6,
+  "account_count": 12,
+  "finding_count": 7,
+  "accounts_with_findings": 8,
+  "severity_counts": {
+    "high": 1,
+    "medium": 5,
+    "info": 1
+  },
+  "findings": [
+    {
+      "finding_id": "F-0001",
+      "rule": "MISSING_LOGIN_DATA",
+      "severity": "info",
+      "app": "Confluence",
+      "account_ids": [
+        "conf-005"
+      ],
+      "identity_id": "EMP-005",
+      "evidence": "Enabled account has no last-login value; inactivity cannot be established.",
+      "recommendation": "Obtain authentication evidence; missing data alone is not a reason to remove access.",
+      "review_required": true
+    },
+    {
+      "finding_id": "F-0002",
+      "rule": "UNMATCHED_IDENTITY",
+      "severity": "medium",
+      "app": "Confluence",
+      "account_ids": [
+        "conf-unlinked"
+      ],
+      "identity_id": "",
+      "evidence": "Enabled account has no matching identity in the supplied authoritative export.",
+      "recommendation": "Verify export completeness and identity mapping with the application owner before changing access.",
+      "review_required": true
+    },
+    {
+      "finding_id": "F-0003",
+      "rule": "STALE_ENABLED_ACCOUNT",
+      "severity": "medium",
+      "app": "Jira",
+      "account_ids": [
+        "jira-002"
+      ],
+      "identity_id": "EMP-002",
+      "evidence": "Last login 2026-06-01; 154 days before assessment, exceeding 90 days.",
+      "recommendation": "Confirm ongoing business need and authentication log coverage; review access and license allocation.",
+      "review_required": true
+    },
+    {
+      "finding_id": "F-0004",
+      "rule": "INACTIVE_IDENTITY_ACCESS",
+      "severity": "high",
+      "app": "Jira",
+      "account_ids": [
+        "jira-003"
+      ],
+      "identity_id": "EMP-003",
+      "evidence": "Enabled account maps to an identity marked terminated.",
+      "recommendation": "Confirm employment status and approved exceptions; prioritize access review with the owner.",
+      "review_required": true
+    },
+    {
+      "finding_id": "F-0005",
+      "rule": "DISABLED_LICENSED_ACCOUNT",
+      "severity": "medium",
+      "app": "Jira",
+      "account_ids": [
+        "jira-004"
+      ],
+      "identity_id": "EMP-004",
+      "evidence": "Account is disabled but still marked as licensed in the supplied export.",
+      "recommendation": "Review subscription terms, retention requirements, and reassignment options before reclaiming a license.",
+      "review_required": true
+    },
+    {
+      "finding_id": "F-0006",
+      "rule": "UNMATCHED_IDENTITY",
+      "severity": "medium",
+      "app": "Jira",
+      "account_ids": [
+        "jira-005"
+      ],
+      "identity_id": "EMP-999",
+      "evidence": "Enabled account has no matching identity in the supplied authoritative export.",
+      "recommendation": "Verify export completeness and identity mapping with the application owner before changing access.",
+      "review_required": true
+    },
+    {
+      "finding_id": "F-0007",
+      "rule": "MULTIPLE_ENABLED_ACCOUNTS",
+      "severity": "medium",
+      "app": "Confluence",
+      "account_ids": [
+        "conf-006",
+        "conf-006-admin"
+      ],
+      "identity_id": "EMP-006",
+      "evidence": "2 enabled accounts in this app map to the same identity.",
+      "recommendation": "Check whether separate admin and standard accounts are intentional; retain approved exceptions.",
+      "review_required": true
+    }
+  ]
+}

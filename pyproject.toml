@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "application-access-reconciler"
+version = "0.1.0"
+description = "Read-only CSV reconciliation for employee identity and application access reviews"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Ibrahima Aw"}]
+dependencies = []
+
+[project.scripts]
+access-reconcile = "access_reconciler.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["access_reconciler*"]

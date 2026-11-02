@@ -1,0 +1,13 @@
+app,account_id,identity_id,enabled,licensed,last_login
+Jira,jira-001,EMP-001,true,true,2026-10-30
+Jira,jira-002,EMP-002,true,true,2026-06-01
+Jira,jira-003,EMP-003,true,true,2026-10-29
+Jira,jira-004,EMP-004,false,true,2026-08-15
+Jira,jira-005,EMP-999,true,true,2026-10-15
+Confluence,conf-001,EMP-001,true,true,2026-10-28
+Confluence,conf-002,EMP-002,true,true,2026-10-27
+Confluence,conf-003,EMP-003,false,false,2026-07-01
+Confluence,conf-005,EMP-005,true,true,
+Confluence,conf-006,EMP-006,true,true,2026-10-31
+Confluence,conf-006-admin,EMP-006,true,true,2026-10-31
+Confluence,conf-unlinked,,true,false,2026-10-25

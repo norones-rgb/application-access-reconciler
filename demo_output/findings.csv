@@ -1,0 +1,8 @@
+finding_id,rule,severity,app,account_ids,identity_id,evidence,recommendation,review_required
+F-0001,MISSING_LOGIN_DATA,info,Confluence,conf-005,EMP-005,Enabled account has no last-login value; inactivity cannot be established.,Obtain authentication evidence; missing data alone is not a reason to remove access.,True
+F-0002,UNMATCHED_IDENTITY,medium,Confluence,conf-unlinked,,Enabled account has no matching identity in the supplied authoritative export.,Verify export completeness and identity mapping with the application owner before changing access.,True
+F-0003,STALE_ENABLED_ACCOUNT,medium,Jira,jira-002,EMP-002,"Last login 2026-06-01; 154 days before assessment, exceeding 90 days.",Confirm ongoing business need and authentication log coverage; review access and license allocation.,True
+F-0004,INACTIVE_IDENTITY_ACCESS,high,Jira,jira-003,EMP-003,Enabled account maps to an identity marked terminated.,Confirm employment status and approved exceptions; prioritize access review with the owner.,True
+F-0005,DISABLED_LICENSED_ACCOUNT,medium,Jira,jira-004,EMP-004,Account is disabled but still marked as licensed in the supplied export.,"Review subscription terms, retention requirements, and reassignment options before reclaiming a license.",True
+F-0006,UNMATCHED_IDENTITY,medium,Jira,jira-005,EMP-999,Enabled account has no matching identity in the supplied authoritative export.,Verify export completeness and identity mapping with the application owner before changing access.,True
+F-0007,MULTIPLE_ENABLED_ACCOUNTS,medium,Confluence,conf-006; conf-006-admin,EMP-006,2 enabled accounts in this app map to the same identity.,Check whether separate admin and standard accounts are intentional; retain approved exceptions.,True
